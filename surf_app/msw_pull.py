@@ -2,12 +2,16 @@ import requests
 # import pandas as pd
 # from datetime import datetime
 import time
+
+import os
+os.chdir('/Users/kevink/projects/surf_forecast/surf_app')
+
 import config_msw
 
 spots = [382,2159]
 
 # pull data from MSW
-sitedata=requests.get("http://magicseaweed.com/api/" + key + "/forecast/?spot_id=" + str(spots[1]))
+sitedata=requests.get("http://magicseaweed.com/api/" + config_msw.msw["key"] + "/forecast/?spot_id=" + str(spots[1]))
 
 print(sitedata.status_code)
 # print(sitedata.json())
