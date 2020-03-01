@@ -2,8 +2,8 @@ import requests
 # import pandas as pd
 # from datetime import datetime
 import time
+import config_msw
 
-key = "3d56b802f319631a4a55eea0b642fead"
 spots = [382,2159]
 
 # pull data from MSW
